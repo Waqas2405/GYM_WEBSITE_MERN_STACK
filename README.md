@@ -178,20 +178,11 @@ Example request body:
 
 ---
 
-## 🔮 Things I Want to Add Next
-
-- Save contact messages in MongoDB
-- Add an admin page to see messages
-- Add input validation and spam protection on the contact form
-- Add member login and class booking
-
----
-
 ## 👤 About Me
 
 I am a junior MERN stack developer learning and building projects.
 
-- GitHub: [@your-username](https://github.com/your-username)
-- Email: yourgmail@gmail.com
+- GitHub: 
+- Email: 
 
 Feedback and suggestions are welcome!
