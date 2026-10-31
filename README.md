@@ -2,34 +2,28 @@
 
 Hi! This is my gym website project. I built it with the **MERN stack** to practice connecting a React frontend with a Node.js and Express backend. The site has workout sessions, pricing, a BMI calculator, and a contact form that sends the message to the gym owner's email.
 
-**🔗 Live Demo:** [Add your live link here](https://your-live-link.com)
+**🔗 Live Demo:** [Add your live link here]([https://your-live-link.com](https://gym-website-mern-stack-3lsi.vercel.app))
 
 ---
 
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
-
-### Workout Sessions and Bootcamps
-![Workout Sessions](screenshots/workout-sessions.png)
-
-### Pricing
-![Pricing](screenshots/pricing.png)
-
-### BMI Calculator
-![BMI Calculator](screenshots/bmi-calculator.png)
+![Home Page]<img width="1390" height="879" alt="image" src="https://github.com/user-attachments/assets/408e2cd8-ef0d-42f0-b76e-cb061eaa0603" />
 
 ### Gallery
-![Gallery](screenshots/gallery.png)
+![Gallery]<img width="1371" height="787" alt="image" src="https://github.com/user-attachments/assets/540ad65b-a438-48df-815a-a17c036baf8a" />
 
 ### Contact Form
-![Contact Form](screenshots/contact.png)
+![Contact Form]<img width="1720" height="791" alt="image" src="https://github.com/user-attachments/assets/aff8c5e5-89df-4544-9438-a627cc46f91c" />
+
 
 ### Mobile View
 <p align="center">
-  <img src="screenshots/mobile-1.png" alt="Mobile view 1" width="250" />
-  <img src="screenshots/mobile-2.png" alt="Mobile view 2" width="250" />
+ <img width="393" height="774" alt="image" src="https://github.com/user-attachments/assets/088ca571-f79e-4578-84f2-7b575b8b93b2" />
+
+ <img width="387" height="665" alt="image" src="https://github.com/user-attachments/assets/3aee9f00-3f8d-4431-ac5c-e169986232a6" />
+
 </p>
 
 ---
