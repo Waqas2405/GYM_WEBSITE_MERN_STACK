@@ -604,3 +604,342 @@ footer {
     gap: 1px;
   }
 }
+
+/* =====================================================================
+   DARK 3D THEME  (colors + depth effects only)
+   -------------------------------------------------------------------
+   Everything above this line is the original stylesheet and is
+   untouched. This block only changes colors, shadows, bevels and
+   hover tilt, so sizes, spacing, layout and every @media rule stay
+   exactly as they were. Delete this block to go back to the old look.
+   ===================================================================== */
+
+:root {
+  --bg: #070a12;
+  --bg-2: #0c1220;
+  --surface: #121b2e;
+  --surface-2: #0d1525;
+  --accent: #0095ff;
+  --accent-light: #4dbbff;
+  --accent-dark: #0267af;
+  --accent-deep: #024a7e;
+  --text: #e8edf7;
+  --text-muted: #94a0b8;
+  --line: rgba(0, 149, 255, 0.3);
+  scrollbar-color: #0095ff #070a12;
+}
+
+html {
+  background: var(--bg);
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Logo / header ---------- */
+header {
+  border-color: var(--accent);
+  background: rgba(7, 10, 18, 0.55);
+  box-shadow: 0 0 0 1px rgba(0, 149, 255, 0.25),
+    0 0 22px rgba(0, 149, 255, 0.45),
+    0 10px 24px rgba(0, 0, 0, 0.55),
+    inset 0 0 14px rgba(0, 149, 255, 0.18);
+}
+header h1 {
+  color: #fff;
+  text-shadow: 1px 1px 0 var(--accent-dark), 2px 2px 0 var(--accent-deep),
+    3px 3px 6px rgba(0, 0, 0, 0.6), 0 0 18px rgba(0, 149, 255, 0.55);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background-image: radial-gradient(
+      ellipse at 18% 55%,
+      rgba(0, 149, 255, 0.22),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 10, 18, 0) 0%,
+      rgba(7, 10, 18, 0) 70%,
+      #070a12 100%
+    ),
+    url(/img3.jpg);
+  background-blend-mode: normal, normal, darken;
+}
+.hero .content .title {
+  color: #f4f7ff;
+}
+.hero .content .title h1 {
+  color: #f4f7ff;
+  text-shadow: 1px 1px 0 #2d6fb0, 2px 2px 0 #265f98, 3px 3px 0 #1f4f80,
+    4px 4px 0 #183f69, 5px 5px 0 #123057, 7px 8px 14px rgba(0, 0, 0, 0.8),
+    0 0 28px rgba(0, 149, 255, 0.4);
+}
+.hero .content .sub-title p {
+  color: #dbe4f5;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+.hero .content .sub-title p:last-child {
+  color: var(--accent);
+  text-shadow: 0 0 16px rgba(0, 149, 255, 0.65), 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+.hero .content .buttons button {
+  color: var(--accent-light);
+  border-color: var(--accent);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 149, 255, 0.24),
+    rgba(0, 149, 255, 0.05)
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -5px 0 rgba(0, 85, 150, 0.85), 0 0 16px rgba(0, 149, 255, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.hero .content .buttons button:hover {
+  color: #fff;
+  background: linear-gradient(180deg, #3bb2ff 0%, #0095ff 55%, #0077cc 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -5px 0 var(--accent-deep), 0 0 28px rgba(0, 149, 255, 0.75);
+}
+.hero .content .buttons button:active {
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.55),
+    inset 0 -1px 0 var(--accent-deep), 0 0 14px rgba(0, 149, 255, 0.5);
+}
+
+/* ---------- Workout sessions ---------- */
+.workout_session .wrapper h1 {
+  color: #f1f5ff;
+  text-shadow: 1px 1px 0 var(--accent-deep), 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.workout_session .wrapper p {
+  color: var(--text-muted);
+}
+.workout_session .wrapper > img {
+  border-radius: 8px;
+  filter: saturate(1.08) contrast(1.05) brightness(0.92);
+}
+.workout_session .wrapper .bootcamps div {
+  border-color: var(--line);
+  border-bottom-color: rgba(0, 149, 255, 0.5);
+  background: linear-gradient(145deg, var(--surface), var(--surface-2));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 0 -4px 10px rgba(0, 0, 0, 0.5), 0 12px 22px -10px rgba(0, 0, 0, 0.8);
+}
+.workout_session .wrapper .bootcamps div h4 {
+  color: var(--text);
+}
+.workout_session .wrapper .bootcamps div:hover {
+  background: linear-gradient(145deg, #183056, #0a1527);
+  border-color: var(--accent);
+  transform: perspective(900px) rotateX(4deg) rotateY(-2deg) scale(0.975);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -4px 12px rgba(0, 0, 0, 0.55), 0 0 22px rgba(0, 149, 255, 0.35),
+    0 16px 26px -10px rgba(0, 0, 0, 0.9);
+}
+.workout_session .wrapper .bootcamps div:hover h4 {
+  color: var(--accent-light);
+  text-shadow: 0 0 12px rgba(0, 149, 255, 0.6);
+}
+.workout_session .wrapper .bootcamps div:hover p {
+  color: #fff;
+}
+
+/* ---------- Gallery ---------- */
+.gallery {
+  background: linear-gradient(180deg, #05070d 0%, #0a1222 50%, #05070d 100%);
+}
+.gallery h1 {
+  color: var(--accent);
+  text-shadow: 1px 1px 0 var(--accent-deep), 2px 2px 0 #01314f,
+    3px 3px 8px rgba(0, 0, 0, 0.7), 0 0 22px rgba(0, 149, 255, 0.45);
+}
+.gallery .images img {
+  border-radius: 6px;
+  filter: brightness(0.88) saturate(1.1) contrast(1.05);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+.gallery .images img:hover {
+  filter: brightness(1.12) saturate(1.2) contrast(1.05);
+  transform: perspective(900px) rotateY(5deg) rotateX(2deg) scale(0.955);
+}
+
+/* ---------- Pricing (kept in sync, in case you use it later) ---------- */
+.pricing {
+  background: linear-gradient(180deg, var(--bg), var(--bg-2));
+}
+.pricing h1 {
+  color: var(--text);
+  text-shadow: 1px 1px 0 var(--accent-deep), 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.pricing .wrapper .card {
+  box-shadow: 0 0 0 1px var(--line), 0 24px 40px -12px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(0, 149, 255, 0.12);
+  -webkit-box-shadow: 0 0 0 1px var(--line), 0 24px 40px -12px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(0, 149, 255, 0.12);
+}
+.pricing .wrapper .card .title::after {
+  background: var(--surface-2);
+}
+.pricing .wrapper .card .description {
+  background: linear-gradient(160deg, var(--surface), var(--surface-2));
+  color: var(--text);
+}
+.pricing .wrapper .card .description a {
+  background: linear-gradient(180deg, #34b0ff, #0095ff 60%, #0077cc);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -4px 0 var(--accent-deep);
+}
+.pricing .wrapper .card .description a:hover {
+  background: linear-gradient(180deg, #4dbbff, #0a9dff 60%, #0267af);
+}
+
+/* ---------- Contact ---------- */
+.contact form {
+  background: linear-gradient(
+    150deg,
+    rgba(22, 32, 54, 0.94),
+    rgba(8, 12, 22, 0.96)
+  );
+  color: var(--text);
+  box-shadow: 0 0 0 1px var(--line), 0 34px 60px -12px rgba(0, 0, 0, 0.9),
+    0 0 46px rgba(0, 149, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.contact form h1 {
+  color: #fff;
+  text-shadow: 1px 1px 0 var(--accent-deep), 2px 2px 6px rgba(0, 0, 0, 0.6),
+    0 0 18px rgba(0, 149, 255, 0.4);
+}
+.contact form div label {
+  color: #a9b8d6;
+}
+.contact form div input {
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom-color: rgba(0, 149, 255, 0.55);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.6);
+  transition: 0.25s;
+}
+.contact form div input:focus {
+  border-bottom-color: var(--accent);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.6),
+    0 6px 14px -6px rgba(0, 149, 255, 0.7);
+}
+.contact form div input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text);
+  box-shadow: 0 0 0 1000px #0b1220 inset;
+  caret-color: var(--text);
+}
+.contact form button {
+  background: linear-gradient(180deg, #3bb2ff 0%, #0095ff 55%, #0077cc 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -5px 0 var(--accent-deep);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+.contact form button:hover {
+  background: linear-gradient(180deg, #55c0ff 0%, #12a0ff 55%, #0a82d8 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -5px 0 var(--accent-deep), 0 0 24px rgba(0, 149, 255, 0.6);
+}
+.contact form button:active {
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5),
+    inset 0 -1px 0 var(--accent-deep);
+}
+.contact form button:disabled {
+  filter: grayscale(0.4) brightness(0.8);
+  cursor: not-allowed;
+}
+
+/* ---------- BMI calculator ---------- */
+.bmi {
+  background: linear-gradient(135deg, #050a14 0%, #0a2038 55%, #14103a 100%);
+}
+.bmi h1 {
+  color: #f4f7ff;
+  text-shadow: 1px 1px 0 var(--accent-dark), 2px 2px 0 var(--accent-deep),
+    3px 3px 8px rgba(0, 0, 0, 0.7), 0 0 22px rgba(0, 149, 255, 0.4);
+}
+.bmi .container {
+  color: var(--text);
+}
+.bmi .container .wrapper form div label {
+  color: #a9b8d6;
+}
+.bmi .container .wrapper form div input,
+.bmi .container .wrapper form div select {
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom-color: rgba(0, 149, 255, 0.6);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.6);
+  transition: 0.25s;
+}
+.bmi .container .wrapper form div input:focus,
+.bmi .container .wrapper form div select:focus {
+  border-bottom-color: var(--accent);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.6),
+    0 6px 14px -6px rgba(0, 149, 255, 0.7);
+}
+.bmi .container .wrapper form div option {
+  color: var(--text);
+  background: #0b1424;
+}
+.bmi .container .wrapper form button {
+  color: #fff;
+  background: linear-gradient(180deg, #3bb2ff 0%, #0095ff 55%, #0077cc 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -5px 0 var(--accent-deep);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: 0.25s;
+}
+.bmi .container .wrapper form button:hover {
+  background: linear-gradient(180deg, #55c0ff 0%, #12a0ff 55%, #0a82d8 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -5px 0 var(--accent-deep), 0 0 24px rgba(0, 149, 255, 0.6);
+}
+.bmi .container .wrapper form button:active {
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5),
+    inset 0 -1px 0 var(--accent-deep);
+}
+.bmi .container .wrapper:last-child {
+  position: relative;
+  border-radius: 10px;
+}
+.bmi .container .wrapper:last-child img {
+  border-radius: 10px;
+  filter: saturate(1.1) contrast(1.05) brightness(0.9);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.bmi .container .wrapper:last-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px var(--line), inset 0 0 60px rgba(0, 0, 0, 0.55),
+    inset 0 2px 0 rgba(255, 255, 255, 0.12);
+}
+.bmi .container .wrapper:last-child:hover img {
+  filter: saturate(1.2) contrast(1.05) brightness(1);
+  transform: perspective(1000px) rotateY(-4deg) scale(0.96);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #04060b;
+  color: var(--accent);
+  text-shadow: 0 0 14px rgba(0, 149, 255, 0.55), 1px 1px 0 var(--accent-deep);
+  box-shadow: inset 0 1px 0 var(--line), 0 -14px 34px rgba(0, 149, 255, 0.1);
+}
+
+/* Respect people who turn animations off */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
