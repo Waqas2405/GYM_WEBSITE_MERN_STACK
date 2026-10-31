@@ -2,7 +2,7 @@
 
 Hi! This is my gym website project. I built it with the **MERN stack** to practice connecting a React frontend with a Node.js and Express backend. The site has workout sessions, pricing, a BMI calculator, and a contact form that sends the message to the gym owner's email.
 
-**🔗 Live Demo:** [Add your live link here]([https://your-live-link.com](https://gym-website-mern-stack-3lsi.vercel.app))
+**🔗 Live Demo:** https://gym-website-mern-stack-3lsi.vercel.app/
 
 ---
 
